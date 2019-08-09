@@ -14,13 +14,6 @@ namespace HairSalon.Controllers
             _db = db;
         }
 
-        // public ActionResult Index (int clientId)
-        // {
-        //     Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == clientId);
-           
-        //     return View(thisClient);
-        // }
-
         public ActionResult Create(int id)
         {
             Console.WriteLine("STYLIST ID ARGUMENT: " + id);
