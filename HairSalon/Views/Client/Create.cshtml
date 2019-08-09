@@ -1,6 +1,6 @@
 @{ Layout = "_Layout"; }
 
-@model HairSalon.Models.Client
+@model HairSalon.Models.Stylist
 
 <h5>New Client: </h5>
 
@@ -9,10 +9,9 @@
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
 
-    @Html.LabelFor(model => model.StylistId)
-    @Html.DropDownList("StylistId")
+    @Html.Hidden("StylistId", @Model.StylistId);
 
     <input type="submit" value="Add new client" class="btn btn-default" />
 }
 
-<p>@Html.ActionLink("Back To Home Page", "/", "Home")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

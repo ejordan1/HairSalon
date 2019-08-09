@@ -3,7 +3,7 @@ using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-
+using System;
 namespace HairSalon.Controllers
 {
     public class ClientController : Controller {
@@ -21,9 +21,12 @@ namespace HairSalon.Controllers
         //     return View(thisClient);
         // }
 
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-            return View();
+            Console.WriteLine("STYLIST ID ARGUMENT: " + id);
+            Stylist s =_db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+            Console.WriteLine(s.StylistId);
+            return View(_db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id));
         }
 
         //this pathing could be improved
