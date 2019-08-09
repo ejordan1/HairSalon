@@ -4,12 +4,13 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using HairSalon.Models;
+using System;
 namespace HairSalon.Controllers{
 
-    public class SylistController : Controller
+    public class StylistController : Controller
     {
         private readonly HairSalonContext _db;
-        public SylistController(HairSalonContext db)
+        public StylistController(HairSalonContext db)
         {
             _db = db;
         }
@@ -17,6 +18,7 @@ namespace HairSalon.Controllers{
 
         public ActionResult Index()
         {
+            Console.WriteLine("STYLIST CONTROLLER INDEX");
             List<Stylist> model = _db.Stylists.ToList();
             return View(model);
         }
