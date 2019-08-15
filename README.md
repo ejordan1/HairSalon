@@ -1,4 +1,4 @@
-# _WordCounter_
+# _Hair Salon_
 
 #### _This is program managers stylists and clients of a hair salon_
 
