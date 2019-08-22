@@ -1,6 +1,6 @@
 # _Hair Salon_
 
-#### _This is program managers stylists and clients of a hair salon_
+#### _This is a program for managing stylists and clients of a hair salon_
 
 #### By _**Emerson Jordan**_
 
@@ -26,7 +26,7 @@ _This program manages stylists and clients for a hair salon using a one to many 
 
 ## Support and contact details
 
-_If there are unknown unknown bugs please contact Emerson at emerz21@gmail.com_
+_If there are unknown bugs please contact Emerson at emerz21@gmail.com_
 
 ## Technologies Used
 

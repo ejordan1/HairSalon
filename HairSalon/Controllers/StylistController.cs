@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using HairSalon.Models;
 using System;
-namespace HairSalon.Controllers{
+namespace HairSalon.Controllers
+{
 
     public class StylistController : Controller
     {
@@ -18,7 +19,6 @@ namespace HairSalon.Controllers{
 
         public ActionResult Index()
         {
-            Console.WriteLine("STYLIST CONTROLLER INDEX");
             List<Stylist> model = _db.Stylists.ToList();
             return View(model);
         }
@@ -38,7 +38,6 @@ namespace HairSalon.Controllers{
 
         public ActionResult Details(int id)
         {
-             Console.WriteLine("STYLIST CONTROLLER DETAILS");
             Stylist stylist = _db.Stylists.FirstOrDefault(sty => sty.StylistId == id);
             List<Client> clientList = _db.Clients.Where(client => client.StylistId == id).ToList();
             ViewBag.clientList = clientList;

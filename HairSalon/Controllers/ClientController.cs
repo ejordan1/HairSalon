@@ -6,19 +6,19 @@ using Microsoft.EntityFrameworkCore;
 using System;
 namespace HairSalon.Controllers
 {
-    public class ClientController : Controller {
+    public class ClientController : Controller
+    {
 
         private readonly HairSalonContext _db;
 
-        public ClientController(HairSalonContext db){
+        public ClientController(HairSalonContext db)
+        {
             _db = db;
         }
 
         public ActionResult Create(int id)
         {
-            Console.WriteLine("STYLIST ID ARGUMENT: " + id);
-            Stylist s =_db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-            Console.WriteLine(s.StylistId);
+            Stylist s = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
             return View(_db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id));
         }
 
@@ -32,4 +32,4 @@ namespace HairSalon.Controllers
         }
 
     }
-} 
+}
